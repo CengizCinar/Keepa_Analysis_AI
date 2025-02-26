@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Keepa Analysis AI</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 400px;
+      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .header h1 {
+      color: #2c3e50;
+      margin: 0;
+      font-size: 24px;
+    }
+    .analysis-section {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 15px;
+    }
+    .analysis-title {
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+    .analysis-content {
+      color: #495057;
+    }
+    .loading {
+      text-align: center;
+      color: #6c757d;
+    }
+    .error {
+      color: #dc3545;
+      text-align: center;
+      padding: 10px;
+      background: #f8d7da;
+      border-radius: 4px;
+      display: none;
+    }
+    .button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Keepa Analysis AI</h1>
+    </div>
+    
+    <div id="loading" class="loading">
+      Analyzing product data...
+    </div>
+
+    <div id="error" class="error">
+      Unable to analyze this product. Please make sure you're on an Amazon product page.
+    </div>
+
+    <div id="analysis" class="analysis-section" style="display: none;">
+      <div class="analysis-title">Price Analysis</div>
+      <div id="priceAnalysis" class="analysis-content">
+        <!-- Price analysis will be inserted here -->
+      </div>
+      
+      <div class="analysis-title">Sales Rank Analysis</div>
+      <div id="rankAnalysis" class="analysis-content">
+        <!-- Sales rank analysis will be inserted here -->
+      </div>
+      
+      <div class="analysis-title">Recommendations</div>
+      <div id="recommendations" class="analysis-content">
+        <!-- AI recommendations will be inserted here -->
+      </div>
+    </div>
+
+    <button id="analyzeButton" class="button">
+      Analyze Product
+    </button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 
